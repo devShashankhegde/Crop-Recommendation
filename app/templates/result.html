@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, rgba(7, 231, 194, 0.3), rgba(72, 249, 2, 0.3));
+        }
+
+        #h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 5rem;
+            color: rgb(242, 31, 8);
+        }
+
+        .prediction {
+            text-align: center;
+            font-size: 3rem;
+            color: rgb(6, 9, 178);
+            margin-top: 50px;
+        }
+
+        #rice {
+            color: #2d1f1f;
+            font-size: 20px;
+        }
+
+        .prediction-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 50rem;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">Prediction Result</h1>
+    <div class="prediction">
+        <p>You can Grow {{ prediction }} in the Soil</p>
+        {% if prediction == 'rice' %}
+        <img src="{{ url_for('static', filename='rice.jpg') }}" class="prediction-image" alt="Rice">
+        <p id="rice">Rice cultivation thrives best in soils with specific characteristics. The ideal soil types for rice
+            are clayey or loamy soils due to their excellent water retention capabilities. Such soils ensure that the
+            rice fields can remain flooded, which is a critical requirement during much of the rice growing cycle.
+            Additionally, the soil pH should be slightly acidic to neutral, typically between 5.5 and 6.5. Nutrient-rich
+            soils with high organic matter content, as well as adequate levels of nitrogen, phosphorus, and potassium,
+            are essential for the healthy growth of rice plants.</p>
+            <h6>Click Here for More Information</h6>
+            <a href="https://en.wikipedia.org/wiki/Rice">Click Here</a>
+        {% elif prediction == 'maize' %}
+        <img src="{{ url_for('static', filename='maize.jpg') }}" class="prediction-image" alt="Maize">
+        {% elif prediction == 'chickpea' %}
+        <img src="{{ url_for('static', filename='chickpea.jpg') }}" class="prediction-image" alt="Chickpea">
+        {% elif prediction == 'kidneybeans' %}
+        <img src="{{ url_for('static', filename='Kidney-beans.jpg') }}" class="prediction-image" alt="Kidney Beans">
+        {% elif prediction == 'pigeonpeas' %}
+        <img src="{{ url_for('static', filename='pigeonpeas.jpg') }}" class="prediction-image" alt="Pigeon Peas">
+        {% elif prediction == 'mothbeans' %}
+        <img src="{{ url_for('static', filename='mothbean.jpg') }}" class="prediction-image" alt="Moth Beans">
+        {% elif prediction == 'mungbean' %}
+        <img src="{{ url_for('static', filename='mungbean.jpg') }}" class="prediction-image" alt="Mung Bean">
+        {% elif prediction == 'blackgram' %}
+        <img src="{{ url_for('static', filename='blackgram.jpg') }}" class="prediction-image" alt="Black Gram">
+        {% elif prediction == 'lentil' %}
+        <img src="{{ url_for('static', filename='lentil.jpg') }}" class="prediction-image" alt="Lentil">
+        {% elif prediction == 'pomegranate' %}
+        <img src="{{ url_for('static', filename='pomegranite.jpg') }}" class="prediction-image" alt="Pomegranate">
+        {% elif prediction == 'banana' %}
+        <img src="{{ url_for('static', filename='banana.jpg') }}" class="prediction-image" alt="Banana">
+        {% elif prediction == 'mango' %}
+        <img src="{{ url_for('static', filename='mango.jpg') }}" class="prediction-image" alt="Mango">
+        {% elif prediction == 'grapes' %}
+        <img src="{{ url_for('static', filename='grape.jpg') }}" class="prediction-image" alt="Grapes">
+        {% elif prediction == 'watermelon' %}
+        <img src="{{ url_for('static', filename='watermelon.jpg') }}" class="prediction-image" alt="Watermelon">
+        {% elif prediction == 'muskmelon' %}
+        <img src="{{ url_for('static', filename='muskmelon.jpg') }}" class="prediction-image" alt="Muskmelon">
+        {% elif prediction == 'apple' %}
+        <img src="{{ url_for('static', filename='apple-plant.jpg') }}" class="prediction-image" alt="Apple">
+        {% elif prediction == 'orange' %}
+        <img src="{{ url_for('static', filename='orange-plant.JPG') }}" class="prediction-image" alt="Orange">
+        {% elif prediction == 'papaya' %}
+        <img src="{{ url_for('static', filename='papaya-plant.jpg') }}" class="prediction-image" alt="Papaya">
+        {% elif prediction == 'coconut' %}
+        <img src="{{ url_for('static', filename='coconut-tree.jpg') }}" class="prediction-image" alt="Coconut">
+        {% elif prediction == 'cotton' %}
+        <img src="{{ url_for('static', filename='cotton.jpg') }}" class="prediction-image" alt="Cotton">
+        {% elif prediction == 'jute' %}
+        <img src="{{ url_for('static', filename='jute.jpg') }}" class="prediction-image" alt="Jute">
+        {% elif prediction == 'coffee' %}
+        <img src="{{ url_for('static', filename='coffee.jpg') }}" class="prediction-image" alt="Coffee">
+        {% else %}
+        <p>No image available for this prediction.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

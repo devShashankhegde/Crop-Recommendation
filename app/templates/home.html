@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱CropMaster🌱</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('static/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            font-size: 24px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity here */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 56px;
+            color: rgb(255, 255, 255);
+            margin-top: 5px;
+        }
+        nav {
+            position: fixed; /* Position navbar fixed at the top */
+            top: 0; /* Align navbar to the top */
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: white; /* Set navbar background color */
+            padding: 10px 0; /* Add padding */
+            z-index: 1000; /* Ensure navbar is on top */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(47, 184, 6);
+            font-size: 28px; /* Adjust font size */
+        }
+        nav ul li.logo {
+    font-weight: bold;
+    color: orange;
+    text-align: left;
+    font-size: 3rem;
+    
+}
+        .prediction-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 28px;
+            
+        }
+        .prediction-button button {
+            padding: 15px 30px;
+            font-size: 28px;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            background-color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="logo"> 🌱CropMaster 🌱</li>
+        </ul>
+    </nav>
+    <h1>Welcome to Crop Master!</h1>
+    <h1>Let's Predict the Perfect Crop for Your Soil 🌾</h1>
+    <hr>
+    <div class="prediction-button">
+        <button onclick="window.location.href='/index.html'">Crop Prediction</button>
+    </div>
+</body>
+</html>
