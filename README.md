@@ -8,7 +8,7 @@ A web-based application that recommends the best crop to grow based on environme
 - Trained using a Random Forest Classifier.
 - Dataset: `Crop_recommendation.csv`.
 - Inputs: N, P, K, temperature, humidity, pH, rainfall.
-- Output: Crop name (e.g., rice, maize).
+- Output: Crop name (e.g., rice, maize) and ChatBot
 
 ## 🧪 Technologies
 
@@ -45,7 +45,7 @@ http://127.0.0.1:5000/
 ```
 
 ## 🖼️ Screenshots
-
+![Image](https://github.com/user-attachments/assets/8847501c-d01c-4230-acf4-86f1c3a0264d)
 
 ## 🙋‍♂️ Author
 **Shashank Hegde**  
